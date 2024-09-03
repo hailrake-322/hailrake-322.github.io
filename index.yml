@@ -1,0 +1,57 @@
+site_name: TypeD(R|S) documentation
+extra_css:
+  - all.css
+
+theme:
+  name: 'material'
+  custom_dir: 'overrides'
+  palette:
+    - scheme: default
+      primary: 'indigo'
+      accent: 'indigo'
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: 'indigo'
+      accent: 'indigo'
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+        
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  favicon: 'icon.ico'
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - attr_list
+  - md_in_html
+  - meta
+  - toc:
+      permalink: true
+
+plugins:
+  - glightbox
+
+extra_javascript:
+  - all.js
+
+footer:
+  - text: "Copyright 2024 Protok"
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: get_start.md
+      - Add FLM: addflm.md
+      - About Keil Project: about_keil_pj.md
+  - Guides:
+      - Assets system: assets.md
+      - Update firmware from boot: boot.md
+#  - API Documentation:
+ #     - API Documentation: swagger/index.html
+
