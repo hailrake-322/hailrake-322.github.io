@@ -2,6 +2,7 @@ site_name: TypeD(R|S) documentation
 extra_css:
   - all.css
 
+
 theme:
   name: 'material'
   custom_dir: 'overrides'
