@@ -52,6 +52,9 @@ nav:
   - Guides:
       - Assets system: assets.md
       - Update firmware from boot: boot.md
+      - Working with UI:
+        - Screen Presets: presets_working.md
+        - Events:  events_working.md
 #  - API Documentation:
  #     - API Documentation: swagger/index.html
 
