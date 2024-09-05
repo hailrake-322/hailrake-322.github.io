@@ -408,6 +408,91 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Working with UI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Working with UI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presets_working/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Screen Presets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events_working/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -450,40 +535,43 @@
 
 <h1 id="about-keil-project"><center>About Keil Project<a class="headerlink" href="#about-keil-project" title="Permanent link">&para;</a></h1>
 <table>
+<thead>
 <tr>
 <th><center>APP_MAIN</th>
-<th>
-<center>Discription
-</th>
+<th><center>Discription</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td><center>assets.c</td>
-<td>
-<center>core file for working assets system
-</td>
+<td>core file for working assets system <a href="/assets/">more about them here</a></td>
 </tr>
 <tr>
 <td><center>app_main.c</td>
-<td><center>Initialization all user platform, from CAN interface to UI  </td>
+<td>initialization all user platform, from CAN interface to UI  </td>
+</tr>
+<tr>
+<td><center>app_screens.c</td>
+<td>here all our objects and screens are created, absolutely all graphics, with the appearance of each new screen we need to go down to the lowest of this file, and arrange the correct sequence for creating screens.</td>
 </tr>
 <tr>
 <td><center>app_handlers.c</td>
-<td><center>there are timers set here from 1 millisecond to a second for any of your purposes (sending CAN messages, or processing something)</td>
+<td>there are timers set here from 1 millisecond to a second for any of your purposes (sending CAN messages, or processing something)</td>
 </tr>
 <tr>
 <td><center>app_events.c</td>
-<td><center>all logic that interacts with graphics is will be written here, all events work through lvgl</td>
+<td>all logic that interacts with graphics is will be written here, <a href="events_working">all events work through lvgl</a></td>
 </tr>
 <tr>
 <td><center>app_can.c</td>
-<td><center>receiving CAN messages by the panel, from here you need to process the messages and send graphic events to the app_events file depending on the incoming message (for example)</td>
+<td>receiving CAN messages by the panel, from here you need to process the messages and send graphic events to the app_events file depending on the incoming message (for example)</td>
 </tr>
 <tr>
 <td><center>gj1939_app.c</td>
-<td><center>table of CAN messages that the panel will receive</td>
+<td>table of CAN messages that the panel will receive</td>
 </tr>
+</tbody>
 </table>
-
 <table>
 <thead>
 <tr>
@@ -494,15 +582,15 @@
 <tbody>
 <tr>
 <td><center>app_ui.c</td>
-<td><center>here screen presets for work are created and filled in <a href="in%20working">more about them here</a></td>
+<td>here screen presets for work are created and filled in <a href="/presets_working/">more about them here</a></td>
 </tr>
 <tr>
 <td><center>app_images.c</td>
-<td><center>here the paths to your images are generated, which you convert in the converter, <a href="here the paths to your images are generated, which you convert in the converter, more details here">more details here</a></td>
+<td>here the paths to your images are generated, which you convert in the converter, <a href="/assets/">more details here</a></td>
 </tr>
 <tr>
 <td><center>app_screens.c</td>
-<td><center>here all our objects and screens are created, absolutely all graphics, with the appearance of each new screen we need to go down to the lowest of this file, and arrange the correct sequence for creating screens.</td>
+<td>here all our objects and screens are created, absolutely all graphics, with the appearance of each new screen we need to go down to the lowest of this file, and arrange the correct sequence for creating screens.</td>
 </tr>
 </tbody>
 </table>
