@@ -46,6 +46,8 @@ footer:
 
 nav:
   - Home: index.md
+  - News:
+    - Changelog: changelog.md
   - Getting Started:
       - Installation: get_start.md
       - Add FLM: addflm.md
@@ -60,6 +62,9 @@ nav:
           - Screen Presets: presets_working.md
           - Events:  events_working.md
           - Recommendations: recommendations.md
+  - API:
+      - UI: api_lvgl_addon.md
+      - OTHER: api_other.md
 #  - API Documentation:
  #     - API Documentation: swagger/index.html
 

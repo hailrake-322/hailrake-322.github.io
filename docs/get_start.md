@@ -1,7 +1,14 @@
-# <center> Get starting youre working with board </center>
-* Download the latest version of the project from the [`Release`](https://git.protok.dev/Pushnoy/TypeDR_DS_NEW/-/releases) page
-* Unzip the project and go to the `utils & Other` folder
-* Now you need to add the flm file to your key, for this see [`this`](/addflm/) guide
-* After that, open the `packs` archive and first download `Protok.TypeDR_DS.x.x.x`, then download everything packs from the of the `other packs` folder.
-* Dowload eez studio (from `utils&other->studio` only!)
-#### <center>This is where the minimum requirements for work end, but you can look at the rest of the manuals for a better understanding of how to work with the board
+# Start working with the board
+
+* Download the latest version of the launcher from the server in the discord.
+
+* It is recommended to create a shared folder for working with the panel, and download everything from the launcher to it for greater convenience
+
+* Install the latest version of the project for Keil, DFP from the launcher, also download the latest Vega SDK and, if desired, the simulator.
+
+* Next, to flash the board, you need to add the flm file to Keil, for this, see this guide
+
+* Install all the packs that come with it from DFP
+
+* Download EEZ Studio (only from Vega SDK->EEZ Studio)
+* This is where the minimum requirements for work end, but you can look at the rest of the guides to better understand how to work with the board

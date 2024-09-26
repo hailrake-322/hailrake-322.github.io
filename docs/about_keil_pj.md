@@ -10,6 +10,7 @@
 |<center>app_events.c |all logic that interacts with graphics is will be written here, [all events work through lvgl](events_working) |
 |<center>app_can.c |receiving CAN messages by the panel, from here you need to process the messages and send graphic events to the app_events file depending on the incoming message (for example)  |
 |<center>gj1939_app.c |table of CAN messages that the panel will receive |
+|<center>app_global_config.h |A project-wide configuration file that configures the debug depth level, the brightness level when starting using the display startup function, the time zone, and the application version. |
 
 
 
