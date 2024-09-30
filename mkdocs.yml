@@ -48,6 +48,8 @@ nav:
   - Home: index.md
   - News:
     - Changelog: changelog.md
+  - Releases:
+      - Launcher: launcher.md
   - Getting Started:
       - Installation: get_start.md
       - Add FLM: addflm.md

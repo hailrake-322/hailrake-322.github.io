@@ -4,9 +4,9 @@
 <br>
 
 ### Launcher
-#### Meet the launcher, now it is responsible for installing and updating the project and everything connected with it, you can [download it on our server in discord](https://discord.com/invite/H8RTNTDSPR), in the release channel!
+#### Meet the launcher, now it is responsible for installing and updating the project and everything connected with it, you can [download it on separate launcher page](https://discord.com/invite/H8RTNTDSPR)
 #### In addition to template projects, you can install various demo versions in the launcher, their number will constantly increase, we are aimed at long-term support of the launcher and increasing its functionality.
-#### If you are too lazy to read the full guide to using the launcher, remember the main thing - download all projects into 1 folder, the folder should have the name of the working project, since it will contain a `projects` folder that contains a project for Keil and EEZ Studio
+#### Please, download all projects into 1 folder, the folder should have the name of the working project, since it will contain a `projects` folder that contains a project for Keil and EEZ Studio
 
 ### Keil and EEZ projects
 #### Now Keil and EEZ Studio projects updates independently of DFP, just as it update independently of them.
