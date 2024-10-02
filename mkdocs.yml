@@ -53,6 +53,7 @@ nav:
   - Getting Started:
       - Installation: get_start.md
       - Add FLM: addflm.md
+      - NXP JTAG firmware update: jtag_update.md
       - About Keil Project: about_keil_pj.md
   - Guides:
       - Assets system: assets.md

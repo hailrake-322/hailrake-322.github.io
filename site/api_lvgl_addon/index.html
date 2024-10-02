@@ -1,0 +1,2303 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../recommendations/">
+      
+      
+        <link rel="next" href="../api_other/">
+      
+      
+      <link rel="icon" href="../icon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>UI - TypeD(R|S) documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../all.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ui-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TypeD(R|S) documentation" class="md-header__button md-logo" aria-label="TypeD(R|S) documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TypeD(R|S) documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TypeD(R|S) documentation" class="md-nav__button md-logo" aria-label="TypeD(R|S) documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TypeD(R|S) documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    News
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            News
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Releases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Releases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../launcher/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Launcher
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../addflm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add FLM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jtag_update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NXP JTAG firmware update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about_keil_pj/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Keil Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assets system
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../boot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update firmware from boot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Working with UI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Working with UI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    EEZ Studio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            EEZ Studio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eez_start.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Keil Project
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Keil Project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presets_working/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Screen Presets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events_working/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recommendations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recommendations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ui-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui_preset_screen_createpreset-screen_background-screen_ico" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_preset_screen_create(preset, screen_background, screen_ico)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_preset_screen_loadpreset-update_bg-update_ico" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_preset_screen_load(preset, update_bg, update_ico)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_preset_screen_deletepreset" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_preset_screen_delete(preset)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_arc_set_valuetarget-old_val-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_arc_set_value(target, old_val, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_slider_incrementtarget-val-anm" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_slider_increment(target, val, anm)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_bar_set_text_valuetrg-src-prefix-postfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_bar_set_text_value(trg, src, prefix, postfix)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_text_from_value_slidertrg-src-prefix-postfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_text_from_value_slider(trg, src, prefix, postfix)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_text_from_with_division_value_arctrg-src-prefix-postfix-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_text_from_with_division_value_arc(trg, src, prefix, postfix, division)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_text_from_value_arctrg-src-prefix-postfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_text_from_value_arc(trg, src, prefix, postfix)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_value_text_from_variabletrg-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_value_text_from_variable(trg, value)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_bar_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_bar_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_basic_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_basic_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_dropdown_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_dropdown_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_image_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_image_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_text_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_text_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_roller_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_roller_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_slider_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_slider_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_keyboard_set_targetkeyboard-textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_keyboard_set_target(keyboard, textarea)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_flag_modifytarget-flag-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_flag_modify(target, flag, value)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_state_modifytarget-state-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_state_modify(target, state, value)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scr_unloaded_delete_cbe" class="md-nav__link">
+    <span class="md-ellipsis">
+      scr_unloaded_delete_cb(e)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_opacity_settarget-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_opacity_set(target, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_free_user_dataa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_free_user_data(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_xa-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_x(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_ya-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_y(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_widtha-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_width(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_heighta-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_height(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_opacitya-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_opacity(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_image_zooma-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_image_zoom(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_image_anglea-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_image_angle(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_image_framea-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_image_frame(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_xa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_x(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_ya" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_y(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_widtha" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_width(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_heighta" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_height(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_opacitya" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_opacity(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_image_zooma" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_image_zoom(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_image_anglea" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_image_angle(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_image_framea" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_image_frame(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_checked_set_text_valuetrg-src-txt_on-txt_off" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_checked_set_text_value(trg, src, txt_on, txt_off)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_spinbox_steptarget-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_spinbox_step(target, val)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-camera-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Camera API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI Camera API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui_camera_enableenable" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_camera_enable(enable)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_camera_selectcamera" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_camera_select(camera)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-time-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Time API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI Time API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_time_text_from_rtctrg-prefix-postfix-tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_time_text_from_rtc(trg, prefix, postfix, tick)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_date_text_from_rtctrg-prefix-postfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_date_text_from_rtc(trg, prefix, postfix)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-gps-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI GPS API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI GPS API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui_get_speed_gps" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_get_speed_gps()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_arc_value_from_speed_gpstarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_arc_value_from_speed_gps(target)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_other/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OTHER
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ui-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui_preset_screen_createpreset-screen_background-screen_ico" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_preset_screen_create(preset, screen_background, screen_ico)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_preset_screen_loadpreset-update_bg-update_ico" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_preset_screen_load(preset, update_bg, update_ico)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_preset_screen_deletepreset" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_preset_screen_delete(preset)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_arc_set_valuetarget-old_val-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_arc_set_value(target, old_val, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_slider_incrementtarget-val-anm" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_slider_increment(target, val, anm)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_bar_set_text_valuetrg-src-prefix-postfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_bar_set_text_value(trg, src, prefix, postfix)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_text_from_value_slidertrg-src-prefix-postfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_text_from_value_slider(trg, src, prefix, postfix)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_text_from_with_division_value_arctrg-src-prefix-postfix-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_text_from_with_division_value_arc(trg, src, prefix, postfix, division)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_text_from_value_arctrg-src-prefix-postfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_text_from_value_arc(trg, src, prefix, postfix)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_value_text_from_variabletrg-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_value_text_from_variable(trg, value)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_bar_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_bar_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_basic_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_basic_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_dropdown_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_dropdown_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_image_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_image_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_text_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_text_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_roller_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_roller_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_slider_set_propertytarget-id-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_slider_set_property(target, id, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_keyboard_set_targetkeyboard-textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_keyboard_set_target(keyboard, textarea)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_flag_modifytarget-flag-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_flag_modify(target, flag, value)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_state_modifytarget-state-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_state_modify(target, state, value)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scr_unloaded_delete_cbe" class="md-nav__link">
+    <span class="md-ellipsis">
+      scr_unloaded_delete_cb(e)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_opacity_settarget-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_opacity_set(target, val)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_free_user_dataa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_free_user_data(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_xa-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_x(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_ya-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_y(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_widtha-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_width(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_heighta-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_height(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_opacitya-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_opacity(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_image_zooma-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_image_zoom(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_image_anglea-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_image_angle(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_set_image_framea-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_set_image_frame(a, v)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_xa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_x(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_ya" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_y(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_widtha" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_width(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_heighta" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_height(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_opacitya" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_opacity(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_image_zooma" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_image_zoom(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_image_anglea" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_image_angle(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_anim_callback_get_image_framea" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_anim_callback_get_image_frame(a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_checked_set_text_valuetrg-src-txt_on-txt_off" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_checked_set_text_value(trg, src, txt_on, txt_off)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_spinbox_steptarget-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_spinbox_step(target, val)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-camera-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Camera API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI Camera API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui_camera_enableenable" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_camera_enable(enable)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_camera_selectcamera" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_camera_select(camera)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-time-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Time API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI Time API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_time_text_from_rtctrg-prefix-postfix-tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_time_text_from_rtc(trg, prefix, postfix, tick)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_date_text_from_rtctrg-prefix-postfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_date_text_from_rtc(trg, prefix, postfix)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-gps-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI GPS API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI GPS API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui_get_speed_gps" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_get_speed_gps()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_set_arc_value_from_speed_gpstarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      ui_set_arc_value_from_speed_gps(target)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>UI</h1>
+
+<h2 id="ui-api">UI API<a class="headerlink" href="#ui-api" title="Permanent link">&para;</a></h2>
+<h2 id="ui">UI<a class="headerlink" href="#ui" title="Permanent link">&para;</a></h2>
+<h4 id="ui_preset_screen_createpreset-screen_background-screen_ico"><code>ui_preset_screen_create(preset, screen_background, screen_ico)</code><a class="headerlink" href="#ui_preset_screen_createpreset-screen_background-screen_ico" title="Permanent link">&para;</a></h4>
+<p>Creates a new preset with screens.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>preset</code> (Screen_Preset*): Pointer to the preset structure.</li>
+<li><code>screen_background</code> (lv_obj_t*): Pointer to the screen background object.</li>
+<li><code>screen_ico</code> (lv_obj_t*): Pointer to the screen icon object.</li>
+</ul>
+<h4 id="ui_preset_screen_loadpreset-update_bg-update_ico"><code>ui_preset_screen_load(preset, update_bg, update_ico)</code><a class="headerlink" href="#ui_preset_screen_loadpreset-update_bg-update_ico" title="Permanent link">&para;</a></h4>
+<p>Loads a new preset with screens.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>preset</code> (Screen_Preset*): Pointer to the preset structure.</li>
+<li><code>update_bg</code> (bool): Flag to update the background.</li>
+<li><code>update_ico</code> (bool): Flag to update the icon.</li>
+</ul>
+<h4 id="ui_preset_screen_deletepreset"><code>ui_preset_screen_delete(preset)</code><a class="headerlink" href="#ui_preset_screen_deletepreset" title="Permanent link">&para;</a></h4>
+<p>Deletes the preset.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>preset</code> (Screen_Preset*): Pointer to the preset structure.</li>
+</ul>
+<h4 id="ui_arc_set_valuetarget-old_val-val"><code>ui_arc_set_value(target, old_val, val)</code><a class="headerlink" href="#ui_arc_set_valuetarget-old_val-val" title="Permanent link">&para;</a></h4>
+<p>Sets the value for the arc.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the arc object.</li>
+<li><code>old_val</code> (int): Old value.</li>
+<li><code>val</code> (int): New value.</li>
+</ul>
+<h4 id="ui_slider_incrementtarget-val-anm"><code>ui_slider_increment(target, val, anm)</code><a class="headerlink" href="#ui_slider_incrementtarget-val-anm" title="Permanent link">&para;</a></h4>
+<p>Increments the value of the slider.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the slider object.</li>
+<li><code>val</code> (int): Value to increment.</li>
+<li><code>anm</code> (int): Animation flag.</li>
+</ul>
+<h4 id="ui_bar_set_text_valuetrg-src-prefix-postfix"><code>ui_bar_set_text_value(trg, src, prefix, postfix)</code><a class="headerlink" href="#ui_bar_set_text_valuetrg-src-prefix-postfix" title="Permanent link">&para;</a></h4>
+<p>Sets the text for the bar.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>trg</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>src</code> (lv_obj_t*): Pointer to the source bar object.</li>
+<li><code>prefix</code> (const char*): Prefix of the text.</li>
+<li><code>postfix</code> (const char*): Postfix of the text.</li>
+</ul>
+<h4 id="ui_set_text_from_value_slidertrg-src-prefix-postfix"><code>ui_set_text_from_value_slider(trg, src, prefix, postfix)</code><a class="headerlink" href="#ui_set_text_from_value_slidertrg-src-prefix-postfix" title="Permanent link">&para;</a></h4>
+<p>Sets the text from the slider value.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>trg</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>src</code> (lv_obj_t*): Pointer to the source slider object.</li>
+<li><code>prefix</code> (const char*): Prefix of the text.</li>
+<li><code>postfix</code> (const char*): Postfix of the text.</li>
+</ul>
+<h4 id="ui_set_text_from_with_division_value_arctrg-src-prefix-postfix-division"><code>ui_set_text_from_with_division_value_arc(trg, src, prefix, postfix, division)</code><a class="headerlink" href="#ui_set_text_from_with_division_value_arctrg-src-prefix-postfix-division" title="Permanent link">&para;</a></h4>
+<p>Sets the text from the arc value with division.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>trg</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>src</code> (lv_obj_t*): Pointer to the source arc object.</li>
+<li><code>prefix</code> (const char*): Prefix of the text.</li>
+<li><code>postfix</code> (const char*): Postfix of the text.</li>
+<li><code>division</code> (uint8_t): Division factor.</li>
+</ul>
+<h4 id="ui_set_text_from_value_arctrg-src-prefix-postfix"><code>ui_set_text_from_value_arc(trg, src, prefix, postfix)</code><a class="headerlink" href="#ui_set_text_from_value_arctrg-src-prefix-postfix" title="Permanent link">&para;</a></h4>
+<p>Sets the text from the arc value.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>trg</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>src</code> (lv_obj_t*): Pointer to the source arc object.</li>
+<li><code>prefix</code> (const char*): Prefix of the text.</li>
+<li><code>postfix</code> (const char*): Postfix of the text.</li>
+</ul>
+<h4 id="ui_set_value_text_from_variabletrg-value"><code>ui_set_value_text_from_variable(trg, value)</code><a class="headerlink" href="#ui_set_value_text_from_variabletrg-value" title="Permanent link">&para;</a></h4>
+<p>Sets the text from a variable.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>trg</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>value</code> (int): Value to set.</li>
+</ul>
+<h4 id="ui_bar_set_propertytarget-id-val"><code>ui_bar_set_property(target, id, val)</code><a class="headerlink" href="#ui_bar_set_propertytarget-id-val" title="Permanent link">&para;</a></h4>
+<p>Sets the bar value.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>id</code> (int): Property ID.</li>
+<li><code>val</code> (int): Value to set.</li>
+</ul>
+<h4 id="ui_basic_set_propertytarget-id-val"><code>ui_basic_set_property(target, id, val)</code><a class="headerlink" href="#ui_basic_set_propertytarget-id-val" title="Permanent link">&para;</a></h4>
+<p>Sets basic properties (position, width, height).</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>id</code> (int): Property ID.</li>
+<li><code>val</code> (int): Value to set.</li>
+</ul>
+<h4 id="ui_dropdown_set_propertytarget-id-val"><code>ui_dropdown_set_property(target, id, val)</code><a class="headerlink" href="#ui_dropdown_set_propertytarget-id-val" title="Permanent link">&para;</a></h4>
+<p>Sets the selected item in a dropdown.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the dropdown object.</li>
+<li><code>id</code> (int): Property ID.</li>
+<li><code>val</code> (int): Value to set.</li>
+</ul>
+<h4 id="ui_image_set_propertytarget-id-val"><code>ui_image_set_property(target, id, val)</code><a class="headerlink" href="#ui_image_set_propertytarget-id-val" title="Permanent link">&para;</a></h4>
+<p>Sets the image source.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the image object.</li>
+<li><code>id</code> (int): Property ID.</li>
+<li><code>val</code> (uint8_t*): Image source.</li>
+</ul>
+<h4 id="ui_text_set_propertytarget-id-val"><code>ui_text_set_property(target, id, val)</code><a class="headerlink" href="#ui_text_set_propertytarget-id-val" title="Permanent link">&para;</a></h4>
+<p>Sets the text of a label.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the label object.</li>
+<li><code>id</code> (int): Property ID.</li>
+<li><code>val</code> (const char*): Text value.</li>
+</ul>
+<h4 id="ui_roller_set_propertytarget-id-val"><code>ui_roller_set_property(target, id, val)</code><a class="headerlink" href="#ui_roller_set_propertytarget-id-val" title="Permanent link">&para;</a></h4>
+<p>Sets the selected item in a roller.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the roller object.</li>
+<li><code>id</code> (int): Property ID.</li>
+<li><code>val</code> (int): Value to set.</li>
+</ul>
+<h4 id="ui_slider_set_propertytarget-id-val"><code>ui_slider_set_property(target, id, val)</code><a class="headerlink" href="#ui_slider_set_propertytarget-id-val" title="Permanent link">&para;</a></h4>
+<p>Sets the value of a slider.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the slider object.</li>
+<li><code>id</code> (int): Property ID.</li>
+<li><code>val</code> (int): Value to set.</li>
+</ul>
+<h4 id="ui_keyboard_set_targetkeyboard-textarea"><code>ui_keyboard_set_target(keyboard, textarea)</code><a class="headerlink" href="#ui_keyboard_set_targetkeyboard-textarea" title="Permanent link">&para;</a></h4>
+<p>Sets the target for a keyboard.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>keyboard</code> (lv_obj_t*): Pointer to the keyboard object.</li>
+<li><code>textarea</code> (lv_obj_t*): Pointer to the textarea object.</li>
+</ul>
+<h4 id="ui_flag_modifytarget-flag-value"><code>ui_flag_modify(target, flag, value)</code><a class="headerlink" href="#ui_flag_modifytarget-flag-value" title="Permanent link">&para;</a></h4>
+<p>Modifies flags of an object.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>flag</code> (int32_t): Flag to modify.</li>
+<li><code>value</code> (int): Modification type (toggle, add, clear).</li>
+</ul>
+<h4 id="ui_state_modifytarget-state-value"><code>ui_state_modify(target, state, value)</code><a class="headerlink" href="#ui_state_modifytarget-state-value" title="Permanent link">&para;</a></h4>
+<p>Modifies states of an object.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>state</code> (int32_t): State to modify.</li>
+<li><code>value</code> (int): Modification type (toggle, add, clear).</li>
+</ul>
+<h4 id="scr_unloaded_delete_cbe"><code>scr_unloaded_delete_cb(e)</code><a class="headerlink" href="#scr_unloaded_delete_cbe" title="Permanent link">&para;</a></h4>
+<p>Callback for deleting unloaded screens.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>e</code> (lv_event_t*): Pointer to the event.</li>
+</ul>
+<h4 id="ui_opacity_settarget-val"><code>ui_opacity_set(target, val)</code><a class="headerlink" href="#ui_opacity_settarget-val" title="Permanent link">&para;</a></h4>
+<p>Sets the opacity (alpha) of an object.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>val</code> (int): Opacity value.</li>
+</ul>
+<h4 id="ui_anim_callback_free_user_dataa"><code>ui_anim_callback_free_user_data(a)</code><a class="headerlink" href="#ui_anim_callback_free_user_dataa" title="Permanent link">&para;</a></h4>
+<p>Frees user data from an animation.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+</ul>
+<h4 id="ui_anim_callback_set_xa-v"><code>ui_anim_callback_set_x(a, v)</code><a class="headerlink" href="#ui_anim_callback_set_xa-v" title="Permanent link">&para;</a></h4>
+<p>Sets the X position in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+<li><code>v</code> (int32_t): X position value.</li>
+</ul>
+<h4 id="ui_anim_callback_set_ya-v"><code>ui_anim_callback_set_y(a, v)</code><a class="headerlink" href="#ui_anim_callback_set_ya-v" title="Permanent link">&para;</a></h4>
+<p>Sets the Y position in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+<li><code>v</code> (int32_t): Y position value.</li>
+</ul>
+<h4 id="ui_anim_callback_set_widtha-v"><code>ui_anim_callback_set_width(a, v)</code><a class="headerlink" href="#ui_anim_callback_set_widtha-v" title="Permanent link">&para;</a></h4>
+<p>Sets the width in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+<li><code>v</code> (int32_t): Width value.</li>
+</ul>
+<h4 id="ui_anim_callback_set_heighta-v"><code>ui_anim_callback_set_height(a, v)</code><a class="headerlink" href="#ui_anim_callback_set_heighta-v" title="Permanent link">&para;</a></h4>
+<p>Sets the height in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+<li><code>v</code> (int32_t): Height value.</li>
+</ul>
+<h4 id="ui_anim_callback_set_opacitya-v"><code>ui_anim_callback_set_opacity(a, v)</code><a class="headerlink" href="#ui_anim_callback_set_opacitya-v" title="Permanent link">&para;</a></h4>
+<p>Sets the opacity in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+<li><code>v</code> (int32_t): Opacity value.</li>
+</ul>
+<h4 id="ui_anim_callback_set_image_zooma-v"><code>ui_anim_callback_set_image_zoom(a, v)</code><a class="headerlink" href="#ui_anim_callback_set_image_zooma-v" title="Permanent link">&para;</a></h4>
+<p>Sets the image zoom in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+<li><code>v</code> (int32_t): Zoom value.</li>
+</ul>
+<h4 id="ui_anim_callback_set_image_anglea-v"><code>ui_anim_callback_set_image_angle(a, v)</code><a class="headerlink" href="#ui_anim_callback_set_image_anglea-v" title="Permanent link">&para;</a></h4>
+<p>Sets the image angle in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+<li><code>v</code> (int32_t): Angle value.</li>
+</ul>
+<h4 id="ui_anim_callback_set_image_framea-v"><code>ui_anim_callback_set_image_frame(a, v)</code><a class="headerlink" href="#ui_anim_callback_set_image_framea-v" title="Permanent link">&para;</a></h4>
+<p>Sets the image frame in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+<li><code>v</code> (int32_t): Frame value.</li>
+</ul>
+<h4 id="ui_anim_callback_get_xa"><code>ui_anim_callback_get_x(a)</code><a class="headerlink" href="#ui_anim_callback_get_xa" title="Permanent link">&para;</a></h4>
+<p>Gets the X position in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+</ul>
+<h4 id="ui_anim_callback_get_ya"><code>ui_anim_callback_get_y(a)</code><a class="headerlink" href="#ui_anim_callback_get_ya" title="Permanent link">&para;</a></h4>
+<p>Gets the Y position in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+</ul>
+<h4 id="ui_anim_callback_get_widtha"><code>ui_anim_callback_get_width(a)</code><a class="headerlink" href="#ui_anim_callback_get_widtha" title="Permanent link">&para;</a></h4>
+<p>Gets the width in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+</ul>
+<h4 id="ui_anim_callback_get_heighta"><code>ui_anim_callback_get_height(a)</code><a class="headerlink" href="#ui_anim_callback_get_heighta" title="Permanent link">&para;</a></h4>
+<p>Gets the height in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+</ul>
+<h4 id="ui_anim_callback_get_opacitya"><code>ui_anim_callback_get_opacity(a)</code><a class="headerlink" href="#ui_anim_callback_get_opacitya" title="Permanent link">&para;</a></h4>
+<p>Gets the opacity in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+</ul>
+<h4 id="ui_anim_callback_get_image_zooma"><code>ui_anim_callback_get_image_zoom(a)</code><a class="headerlink" href="#ui_anim_callback_get_image_zooma" title="Permanent link">&para;</a></h4>
+<p>Gets the image zoom in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+</ul>
+<h4 id="ui_anim_callback_get_image_anglea"><code>ui_anim_callback_get_image_angle(a)</code><a class="headerlink" href="#ui_anim_callback_get_image_anglea" title="Permanent link">&para;</a></h4>
+<p>Gets the image angle in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+</ul>
+<h4 id="ui_anim_callback_get_image_framea"><code>ui_anim_callback_get_image_frame(a)</code><a class="headerlink" href="#ui_anim_callback_get_image_framea" title="Permanent link">&para;</a></h4>
+<p>Gets the image frame in an animation callback.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>a</code> (lv_anim_t*): Pointer to the animation.</li>
+</ul>
+<h4 id="ui_checked_set_text_valuetrg-src-txt_on-txt_off"><code>ui_checked_set_text_value(trg, src, txt_on, txt_off)</code><a class="headerlink" href="#ui_checked_set_text_valuetrg-src-txt_on-txt_off" title="Permanent link">&para;</a></h4>
+<p>Sets the text value based on the checked state.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>trg</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>src</code> (lv_obj_t*): Pointer to the source object.</li>
+<li><code>txt_on</code> (const char*): Text when checked.</li>
+<li><code>txt_off</code> (const char*): Text when not checked.</li>
+</ul>
+<h4 id="ui_spinbox_steptarget-val"><code>ui_spinbox_step(target, val)</code><a class="headerlink" href="#ui_spinbox_steptarget-val" title="Permanent link">&para;</a></h4>
+<p>Increments or decrements the spinbox value.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the spinbox object.</li>
+<li><code>val</code> (int): Value to step.</li>
+</ul>
+<h2 id="ui-camera-api">UI Camera API<a class="headerlink" href="#ui-camera-api" title="Permanent link">&para;</a></h2>
+<h4 id="ui_camera_enableenable"><code>ui_camera_enable(enable)</code><a class="headerlink" href="#ui_camera_enableenable" title="Permanent link">&para;</a></h4>
+<p>Enables or disables the camera.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>enable</code> (bool): True to enable, false to disable.</li>
+</ul>
+<h4 id="ui_camera_selectcamera"><code>ui_camera_select(camera)</code><a class="headerlink" href="#ui_camera_selectcamera" title="Permanent link">&para;</a></h4>
+<p>Selects the camera.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>camera</code> (uint8_t): Camera ID.</li>
+</ul>
+<h2 id="ui-time-api">UI Time API<a class="headerlink" href="#ui-time-api" title="Permanent link">&para;</a></h2>
+<h4 id="ui_set_time_text_from_rtctrg-prefix-postfix-tick"><code>ui_set_time_text_from_rtc(trg, prefix, postfix, tick)</code><a class="headerlink" href="#ui_set_time_text_from_rtctrg-prefix-postfix-tick" title="Permanent link">&para;</a></h4>
+<p>Sets the time text from the RTC module.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>trg</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>prefix</code> (const char*): Prefix of the text.</li>
+<li><code>postfix</code> (const char*): Postfix of the text.</li>
+<li><code>tick</code> (bool): Flag to use tick format.</li>
+</ul>
+<h4 id="ui_set_date_text_from_rtctrg-prefix-postfix"><code>ui_set_date_text_from_rtc(trg, prefix, postfix)</code><a class="headerlink" href="#ui_set_date_text_from_rtctrg-prefix-postfix" title="Permanent link">&para;</a></h4>
+<p>Sets the date text from the RTC module.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>trg</code> (lv_obj_t*): Pointer to the target object.</li>
+<li><code>prefix</code> (const char*): Prefix of the text.</li>
+<li><code>postfix</code> (const char*): Postfix of the text.</li>
+</ul>
+<h2 id="ui-gps-api">UI GPS API<a class="headerlink" href="#ui-gps-api" title="Permanent link">&para;</a></h2>
+<h4 id="ui_get_speed_gps"><code>ui_get_speed_gps()</code><a class="headerlink" href="#ui_get_speed_gps" title="Permanent link">&para;</a></h4>
+<p>Returns the speed from the GPS.</p>
+<h4 id="ui_set_arc_value_from_speed_gpstarget"><code>ui_set_arc_value_from_speed_gps(target)</code><a class="headerlink" href="#ui_set_arc_value_from_speed_gpstarget" title="Permanent link">&para;</a></h4>
+<p>Sets the arc value based on the GPS speed.</p>
+<ul>
+<li><strong>Arguments</strong>:</li>
+<li><code>target</code> (lv_obj_t*): Pointer to the target object.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+    <div class="md-footer__inner">
+      <div class="md-footer__made-with">
+      <h2>Protok Copyright 2024</h2>
+      </div>
+    </div>
+  </footer>
+  
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../all.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
