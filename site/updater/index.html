@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../simulator/">
       
-        <link rel="next" href="changelog/">
+      
+        <link rel="next" href="../api_lvgl_addon/">
       
       
-      <link rel="icon" href="icon.ico">
+      <link rel="icon" href="../icon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>TypeD(R|S) documentation</title>
+        <title>Updater - TypeD(R|S) documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,16 +46,16 @@
       
     
     
-      <link rel="stylesheet" href="all.css">
+      <link rel="stylesheet" href="../all.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -62,7 +64,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -81,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#typedrs-documentation" class="md-skip">
+        <a href="#updater" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +99,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="TypeD(R|S) documentation" class="md-header__button md-logo" aria-label="TypeD(R|S) documentation" data-md-component="logo">
+    <a href=".." title="TypeD(R|S) documentation" class="md-header__button md-logo" aria-label="TypeD(R|S) documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -117,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Updater
             
           </span>
         </div>
@@ -181,7 +183,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="TypeD(R|S) documentation" class="md-nav__button md-logo" aria-label="TypeD(R|S) documentation" data-md-component="logo">
+    <a href=".." title="TypeD(R|S) documentation" class="md-nav__button md-logo" aria-label="TypeD(R|S) documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -196,30 +198,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -228,59 +210,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#this-documentation-is-intended-for-typedrs-panels-with-dfp-version-12-and-higher" class="md-nav__link">
-    <span class="md-ellipsis">
-      This documentation is intended for TypeD(R|S) panels with DFP version 1.2 and higher.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-of-projects-and-all-content-for-panels-occurs-only-through-the-launcher-you-can-download-it-from-the-server-in-discord" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation of projects and all content for panels occurs only through the launcher, you can download it from the server in discord
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation of projects and all content for panels occurs only through the launcher, you can download it from the server in discord">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#protok-copyright-2024" class="md-nav__link">
-    <span class="md-ellipsis">
-      Protok Copyright 2024
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -327,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="changelog/" class="md-nav__link">
+      <a href="../changelog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -390,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="launcher/" class="md-nav__link">
+      <a href="../launcher/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -453,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="get_start/" class="md-nav__link">
+      <a href="../get_start/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -474,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="addflm/" class="md-nav__link">
+      <a href="../addflm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -495,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="jtag_update/" class="md-nav__link">
+      <a href="../jtag_update/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -516,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about_keil_pj/" class="md-nav__link">
+      <a href="../about_keil_pj/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -579,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="assets/" class="md-nav__link">
+      <a href="../assets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -600,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="boot/" class="md-nav__link">
+      <a href="../boot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="presets_working/" class="md-nav__link">
+      <a href="../presets_working/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -712,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="events_working/" class="md-nav__link">
+      <a href="../events_working/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -733,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="recommendations/" class="md-nav__link">
+      <a href="../recommendations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,17 +703,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -798,7 +729,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Applications
@@ -812,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulator/" class="md-nav__link">
+      <a href="../simulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -830,10 +761,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="updater/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Updater
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -842,6 +793,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flashing-the-panel-if-you-already-have-the-application-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flashing the panel if you already have the application file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flashing-the-panel-if-you-do-not-have-the-application-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flashing the panel if you do not have the application file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating firmware
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-only-in-the-evolved-version-available-only-to-the-developer-it-is-part-of-the-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      available only in the Evolved version, available only to the developer, it is part of the SDK
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -896,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api_lvgl_addon/" class="md-nav__link">
+      <a href="../api_lvgl_addon/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -917,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api_other/" class="md-nav__link">
+      <a href="../api_other/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -965,30 +1002,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-documentation-is-intended-for-typedrs-panels-with-dfp-version-12-and-higher" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      This documentation is intended for TypeD(R|S) panels with DFP version 1.2 and higher.
+      Installation:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-of-projects-and-all-content-for-panels-occurs-only-through-the-launcher-you-can-download-it-from-the-server-in-discord" class="md-nav__link">
+  <a href="#working" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation of projects and all content for panels occurs only through the launcher, you can download it from the server in discord
+      Working
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installation of projects and all content for panels occurs only through the launcher, you can download it from the server in discord">
+    <nav class="md-nav" aria-label="Working">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#protok-copyright-2024" class="md-nav__link">
+  <a href="#flashing-the-panel-if-you-already-have-the-application-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Protok Copyright 2024
+      Flashing the panel if you already have the application file
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flashing-the-panel-if-you-do-not-have-the-application-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flashing the panel if you do not have the application file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating firmware
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-only-in-the-evolved-version-available-only-to-the-developer-it-is-part-of-the-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      available only in the Evolved version, available only to the developer, it is part of the SDK
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1012,10 +1082,37 @@
                   
 
 
-<h1 id="typedrs-documentation"><center> TypeD(R|S) documentation<a class="headerlink" href="#typedrs-documentation" title="Permanent link">&para;</a></h1>
-<h3 id="this-documentation-is-intended-for-typedrs-panels-with-dfp-version-12-and-higher">This documentation is intended for TypeD(R|S) panels with DFP version 1.2 and higher.<a class="headerlink" href="#this-documentation-is-intended-for-typedrs-panels-with-dfp-version-12-and-higher" title="Permanent link">&para;</a></h3>
-<h3 id="installation-of-projects-and-all-content-for-panels-occurs-only-through-the-launcher-you-can-download-it-from-the-server-in-discord">Installation of projects and all content for panels occurs only through the launcher, you can download it from the <a href="https://discord.com/invite/H8RTNTDSPR">server in discord</a><a class="headerlink" href="#installation-of-projects-and-all-content-for-panels-occurs-only-through-the-launcher-you-can-download-it-from-the-server-in-discord" title="Permanent link">&para;</a></h3>
-<h5 id="protok-copyright-2024"><center> Protok Copyright 2024<a class="headerlink" href="#protok-copyright-2024" title="Permanent link">&para;</a></h5>
+<h1 id="updater">Updater<a class="headerlink" href="#updater" title="Permanent link">&para;</a></h1>
+<p>Updater allows you to reflash the panel, download the firmware from the git repository, and see what it sends to the terminal.</p>
+<h2 id="installation">Installation:<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The updater requires <a href="https://www.python.org/downloads/">Python</a> version 3.12 or higher and a <a href="https://git-scm.com/downloads">Git</a> client to be installed.</li>
+<li>Before installing/launching the application, install the driver that comes with the standalone version installer (<code>fsl_ucwxp</code>).</li>
+<li>After that, launch the panel and connect it to the computer via USB. If the driver is installed correctly, you will see the panel name, application version, and dfp version.</li>
+<li>If for some reason the panel is not recognized, try reinstalling the driver.</li>
+</ul>
+<h2 id="working">Working<a class="headerlink" href="#working" title="Permanent link">&para;</a></h2>
+<h3 id="flashing-the-panel-if-you-already-have-the-application-file">Flashing the panel if you already have the application file<a class="headerlink" href="#flashing-the-panel-if-you-already-have-the-application-file" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Press the <code>Select Firmware file</code> button</li>
+<li>If the application file is correct, the button for uploading the file to the panel will be unlocked </li>
+<li>If the file upload to the panel was successful, the flashing start button will be unlocked</li>
+</ul>
+<h3 id="flashing-the-panel-if-you-do-not-have-the-application-file">Flashing the panel if you do not have the application file<a class="headerlink" href="#flashing-the-panel-if-you-do-not-have-the-application-file" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Press the <code>Get Firmware</code> button</li>
+<li>In the window that opens, you will need to specify a link to the repository with the firmware files (for example, https://github.com/example/example), if you are not a developer, request this link from the company selling you the panel.</li>
+<li>After entering the link and pressing the enter key, we will see a list of available firmware, select the one you need and close the installation window.</li>
+<li>All subsequent steps are identical to the method when you already have the firmware file.</li>
+</ul>
+<h3 id="creating-firmware">Creating firmware<a class="headerlink" href="#creating-firmware" title="Permanent link">&para;</a></h3>
+<h5 id="available-only-in-the-evolved-version-available-only-to-the-developer-it-is-part-of-the-sdk"><center>available only in the Evolved version, available only to the developer, it is part of the SDK</center><a class="headerlink" href="#available-only-in-the-evolved-version-available-only-to-the-developer-it-is-part-of-the-sdk" title="Permanent link">&para;</a></h5>
+<ul>
+<li>To create firmware, compile the Keil project, then simply click the <code>Create firmware</code> button, the firmware is generated in the <code>output</code> folder, which is located in the root of the updater.</li>
+<li>To release firmware on git, you just need to create a tag inside the repository that will include only the image.bin file (firmware file).</li>
+<li>If the repository is private, you need to give access to the repository to the account of the person who will flash the panel, or you can create an account, give access to repository and provide account to those who will flash the panel.</li>
+<li>If the repository is open, no action is required</li>
+</ul>
 
 
 
@@ -1053,12 +1150,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
       
-        <script src="all.js"></script>
+        <script src="../all.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
