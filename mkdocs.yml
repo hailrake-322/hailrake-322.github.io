@@ -48,13 +48,15 @@ nav:
   - Home: index.md
   - News:
     - Changelog: changelog.md
-  - Releases:
+  - Applications:
       - Launcher: launcher.md
+      - Updater: updater.md
   - Getting Started:
       - Installation: get_start.md
       - Add FLM: addflm.md
       - NXP JTAG firmware update: jtag_update.md
       - About Keil Project: about_keil_pj.md
+      - Simulator: simulator.md
   - Guides:
       - Assets system: assets.md
       - Update firmware from boot: boot.md
@@ -63,9 +65,6 @@ nav:
           - Screen Presets: presets_working.md
           - Events:  events_working.md
           - Recommendations: recommendations.md
-  - Applications:
-      - Simulator: simulator.md
-      - Updater: updater.md
   - API:
       - UI: api_lvgl_addon.md
       - OTHER: api_other.md
