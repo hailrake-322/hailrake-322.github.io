@@ -1,8 +1,10 @@
 # Launcher
 
-#### In addition to template projects, you can install various demo versions in the launcher, their number will constantly increase, we are aimed at long-term support of the launcher and increasing its functionality.
+* The launcher requires [Python](https://www.python.org/downloads/) version 3.12 or higher and a [Git](https://git-scm.com/downloads) client to be installed.
 
-#### Please, download all projects into 1 folder, the folder should have the name of the working project, since it will contain a `projects` folder that contains a project for Keil and EEZ Studio.
+* In addition to template projects, you can install various demo versions in the launcher, their number will constantly increase, we are aimed at long-term support of the launcher and increasing its functionality.
+
+* Please, download all projects into 1 folder, the folder should have the name of the working project, since it will contain a `projects` folder that contains a project for Keil and EEZ Studio.
 
 ## Download Launcher
 

@@ -1,5 +1,5 @@
 # Adding flm file into your Keil
-#### open folder `vega sdk->FLM`
+#### open folder `sdk->FLM`
 #### copy all files from directory
 ![Image title](flm_folder.png){ align=center }  
 #### go to open folder `Keil_v5/ARM/Flash` (I dont know where u installed him, for example `C:/Keil_v5`)

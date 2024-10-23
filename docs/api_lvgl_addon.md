@@ -1,394 +1,463 @@
+# UI API Documentation
+
+## Table of Contents
+1. [UI API](#ui-api)
+2. [UI Animation API](#ui-animation-api)
+3. [UI Camera API](#ui-camera-api)
+4. [UI Time API](#ui-time-api)
+5. [UI GPS API](#ui-gps-api)
+
 ## UI API
 
-## UI
-
-#### `ui_preset_screen_create(preset, screen_background, screen_ico)`
-
+### `ui_preset_screen_create`
 Creates a new preset with screens.
 
-- **Arguments**:
-  - `preset` (Screen_Preset*): Pointer to the preset structure.
-  - `screen_background` (lv_obj_t*): Pointer to the screen background object.
-  - `screen_ico` (lv_obj_t*): Pointer to the screen icon object.
+- **Parameters:**
+  - `Screen_Preset* preset` — Pointer to the preset structure.
+  - `lv_obj_t* screen_background` — Pointer to the background screen object.
+  - `lv_obj_t* screen_ico` — Pointer to the icon screen object.
 
-#### `ui_preset_screen_load(preset, update_bg, update_ico)`
+- **Return value:** None.
 
-Loads a new preset with screens.
+### `ui_preset_screen_load`
+Loads a preset with options to update the background and icon.
 
-- **Arguments**:
-  - `preset` (Screen_Preset*): Pointer to the preset structure.
-  - `update_bg` (bool): Flag to update the background.
-  - `update_ico` (bool): Flag to update the icon.
+- **Parameters:**
+  - `Screen_Preset* preset` — Pointer to the preset to load.
+  - `bool update_bg` — Flag indicating whether to update the background.
+  - `bool update_ico` — Flag indicating whether to update the icon.
 
-#### `ui_preset_screen_delete(preset)`
+- **Return value:** None.
 
-Deletes the preset.
+### `ui_preset_get_active`
+Returns the last loaded preset.
 
-- **Arguments**:
-  - `preset` (Screen_Preset*): Pointer to the preset structure.
+- **Parameters:** None.
+- **Return value:** `Screen_Preset` — The last loaded preset.
 
-#### `ui_arc_set_value(target, old_val, val)`
+### `ui_preset_screen_delete`
+Deletes a preset by setting its screen objects to `NULL`.
 
-Sets the value for the arc.
+- **Parameters:**
+  - `Screen_Preset* preset` — Pointer to the preset to delete.
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the arc object.
-  - `old_val` (int): Old value.
-  - `val` (int): New value.
+- **Return value:** None.
 
-#### `ui_slider_increment(target, val, anm)`
+### `ui_arc_set_value`
+Sets the value of an arc object.
 
-Increments the value of the slider.
+- **Parameters:**
+  - `lv_obj_t* target` — The arc object.
+  - `int old_val` — The previous value of the arc.
+  - `int val` — The new value to set.
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the slider object.
-  - `val` (int): Value to increment.
-  - `anm` (int): Animation flag.
+- **Return value:** `int` — Always returns 0.
 
-#### `ui_bar_set_text_value(trg, src, prefix, postfix)`
+### `ui_slider_increment`
+Increments the value of a slider.
 
-Sets the text for the bar.
+- **Parameters:**
+  - `lv_obj_t* target` — The slider object.
+  - `int val` — The increment value.
+  - `int anm` — Animation flag (1 for animated, 0 for static).
 
-- **Arguments**:
-  - `trg` (lv_obj_t*): Pointer to the target object.
-  - `src` (lv_obj_t*): Pointer to the source bar object.
-  - `prefix` (const char*): Prefix of the text.
-  - `postfix` (const char*): Postfix of the text.
+- **Return value:** None.
 
-#### `ui_set_text_from_value_slider(trg, src, prefix, postfix)`
+### `ui_set_text_from_bar_value`
+Sets text based on a bar's value.
 
-Sets the text from the slider value.
+- **Parameters:**
+  - `lv_obj_t* trg` — The target label object.
+  - `lv_obj_t* src` — The bar object.
+  - `const char* prefix` — Prefix text for the label.
+  - `const char* postfix` — Postfix text for the label.
 
-- **Arguments**:
-  - `trg` (lv_obj_t*): Pointer to the target object.
-  - `src` (lv_obj_t*): Pointer to the source slider object.
-  - `prefix` (const char*): Prefix of the text.
-  - `postfix` (const char*): Postfix of the text.
+- **Return value:** None.
 
-#### `ui_set_text_from_with_division_value_arc(trg, src, prefix, postfix, division)`
+### `ui_set_text_from_value_slider`
+Sets text based on a slider's value.
 
-Sets the text from the arc value with division.
+- **Parameters:**
+  - `lv_obj_t* trg` — The target label object.
+  - `lv_obj_t* src` — The slider object.
+  - `const char* prefix` — Prefix text for the label.
+  - `const char* postfix` — Postfix text for the label.
 
-- **Arguments**:
-  - `trg` (lv_obj_t*): Pointer to the target object.
-  - `src` (lv_obj_t*): Pointer to the source arc object.
-  - `prefix` (const char*): Prefix of the text.
-  - `postfix` (const char*): Postfix of the text.
-  - `division` (uint8_t): Division factor.
+- **Return value:** None.
 
-#### `ui_set_text_from_value_arc(trg, src, prefix, postfix)`
+### `ui_set_text_from_value_arc`
+Sets text based on an arc's value.
 
-Sets the text from the arc value.
+- **Parameters:**
+  - `lv_obj_t* trg` — The target label object.
+  - `lv_obj_t* src` — The arc object.
+  - `const char* prefix` — Prefix text for the label.
+  - `const char* postfix` — Postfix text for the label.
 
-- **Arguments**:
-  - `trg` (lv_obj_t*): Pointer to the target object.
-  - `src` (lv_obj_t*): Pointer to the source arc object.
-  - `prefix` (const char*): Prefix of the text.
-  - `postfix` (const char*): Postfix of the text.
+- **Return value:** None.
 
-#### `ui_set_value_text_from_variable(trg, value)`
+### `ui_set_text_from_with_division_value_arc`
+Sets text based on an arc's value divided by a specified factor.
 
-Sets the text from a variable.
+- **Parameters:**
+  - `lv_obj_t* trg` — The target label object.
+  - `lv_obj_t* src` — The arc object.
+  - `const char* prefix` — Prefix text for the label.
+  - `const char* postfix` — Postfix text for the label.
+  - `uint8_t division` — The factor by which to divide the arc's value.
 
-- **Arguments**:
-  - `trg` (lv_obj_t*): Pointer to the target object.
-  - `value` (int): Value to set.
+- **Return value:** None.
 
-#### `ui_bar_set_property(target, id, val)`
+### `ui_set_value_text_from_variable`
+Sets text based on a given integer value.
 
-Sets the bar value.
+- **Parameters:**
+  - `lv_obj_t* trg` — The target label object.
+  - `int value` — The integer value to set.
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the target object.
-  - `id` (int): Property ID.
-  - `val` (int): Value to set.
+- **Return value:** None.
 
-#### `ui_basic_set_property(target, id, val)`
+### `ui_bar_set_property`
+Sets properties for a bar object.
 
-Sets basic properties (position, width, height).
+- **Parameters:**
+  - `lv_obj_t* target` — The bar object.
+  - `int id` — Property identifier (`UI_BAR_PROPERTY_VALUE_WITH_ANIM` or `UI_BAR_PROPERTY_VALUE`).
+  - `int val` — The value to set.
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the target object.
-  - `id` (int): Property ID.
-  - `val` (int): Value to set.
+- **Return value:** None.
 
-#### `ui_dropdown_set_property(target, id, val)`
+### `ui_basic_set_property_pos`
+Sets the position or size properties of a basic UI element.
 
-Sets the selected item in a dropdown.
+- **Parameters:**
+  - `lv_obj_t* target` — The target UI element.
+  - `int id` — Property identifier (`UI_BASIC_PROPERTY_POSITION_X`, `UI_BASIC_PROPERTY_POSITION_Y`, `UI_BASIC_PROPERTY_WIDTH`, `UI_BASIC_PROPERTY_HEIGHT`).
+  - `int val` — The value to set.
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the dropdown object.
-  - `id` (int): Property ID.
-  - `val` (int): Value to set.
+- **Return value:** None.
 
-#### `ui_image_set_property(target, id, val)`
+### `ui_dropdown_set_property`
+Sets a property for a dropdown object.
 
-Sets the image source.
+- **Parameters:**
+  - `lv_obj_t* target` — The dropdown object.
+  - `int id` — Property identifier (`UI_DROPDOWN_PROPERTY_SELECTED`).
+  - `int val` — The value to set.
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the image object.
-  - `id` (int): Property ID.
-  - `val` (uint8_t*): Image source.
+- **Return value:** None.
 
-#### `ui_text_set_property(target, id, val)`
+### `ui_image_set_property`
+Sets a property for an image object.
 
-Sets the text of a label.
+- **Parameters:**
+  - `lv_obj_t* target` — The image object.
+  - `int id` — Property identifier (`UI_IMAGE_PROPERTY_IMAGE`).
+  - `uint8_t* val` — Pointer to the image source.
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the label object.
-  - `id` (int): Property ID.
-  - `val` (const char*): Text value.
+- **Return value:** None.
 
-#### `ui_roller_set_property(target, id, val)`
+### `ui_text_set_property`
+Sets a property for a text label.
 
-Sets the selected item in a roller.
+- **Parameters:**
+  - `lv_obj_t* target` — The text label object.
+  - `int id` — Property identifier (`UI_LABEL_PROPERTY_TEXT`).
+  - `const char* val` — The text string to set.
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the roller object.
-  - `id` (int): Property ID.
-  - `val` (int): Value to set.
+- **Return value:** None.
 
-#### `ui_slider_set_property(target, id, val)`
+### `ui_roller_set_property`
+Sets a property for a roller object.
 
-Sets the value of a slider.
+- **Parameters:**
+  - `lv_obj_t* target` — The roller object.
+  - `int id` — Property identifier (`UI_ROLLER_PROPERTY_SELECTED_WITH_ANIM`, `UI_ROLLER_PROPERTY_SELECTED`).
+  - `int val` — The value to set.
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the slider object.
-  - `id` (int): Property ID.
-  - `val` (int): Value to set.
+- **Return value:** None.
 
-#### `ui_keyboard_set_target(keyboard, textarea)`
+### `ui_slider_set_property`
+Sets a property for a slider object.
 
-Sets the target for a keyboard.
+- **Parameters:**
+  - `lv_obj_t* target` — The slider object.
+  - `int id` — Property identifier (`UI_SLIDER_PROPERTY_VALUE_WITH_ANIM`, `UI_SLIDER_PROPERTY_VALUE`).
+  - `int val` — The value to set.
 
-- **Arguments**:
-  - `keyboard` (lv_obj_t*): Pointer to the keyboard object.
-  - `textarea` (lv_obj_t*): Pointer to the textarea object.
+- **Return value:** None.
 
-#### `ui_flag_modify(target, flag, value)`
+### `ui_keyboard_set_target`
+Sets the target textarea for a keyboard object.
 
-Modifies flags of an object.
+- **Parameters:**
+  - `lv_obj_t* keyboard` — The keyboard object.
+  - `lv_obj_t* textarea` — The textarea object to link.
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the target object.
-  - `flag` (int32_t): Flag to modify.
-  - `value` (int): Modification type (toggle, add, clear).
+- **Return value:** None.
 
-#### `ui_state_modify(target, state, value)`
+### `ui_flag_modify`
+Modifies a flag for a UI object.
 
-Modifies states of an object.
+- **Parameters:**
+  - `lv_obj_t* target` — The target UI object.
+  - `int32_t flag` — The flag to modify.
+  - `int value` — Action type (`UI_MODIFY_FLAG_TOGGLE`, `UI_MODIFY_FLAG_ADD`, `UI_MODIFY_FLAG_REMOVE`).
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the target object.
-  - `state` (int32_t): State to modify.
-  - `value` (int): Modification type (toggle, add, clear).
+- **Return value:** None.
 
-#### `scr_unloaded_delete_cb(e)`
+### `ui_state_modify`
+Modifies a state for a UI object.
 
-Callback for deleting unloaded screens.
+- **Parameters:**
+  - `lv_obj_t* target` — The target UI object.
+  - `int32_t state` — The state to modify.
+  - `int value` — Action type (`UI_MODIFY_STATE_TOGGLE`, `UI_MODIFY_STATE_ADD`, `UI_MODIFY_STATE_REMOVE`).
 
-- **Arguments**:
-  - `e` (lv_event_t*): Pointer to the event.
+- **Return value:** None.
 
-#### `ui_opacity_set(target, val)`
+### `ui_opacity_set`
+Sets the opacity of a UI object.
 
-Sets the opacity (alpha) of an object.
+- **Parameters:**
+  - `lv_obj_t* target` — The target UI object.
+  - `int val` — The opacity value (0-255).
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the target object.
-  - `val` (int): Opacity value.
+- **Return value:** None.
 
-#### `ui_anim_callback_free_user_data(a)`
+### `ui_checked_set_text_value`
+Sets the text value of a label based on the checked state of another object.
 
-Frees user data from an animation.
+- **Parameters:**
+  - `lv_obj_t* trg` — The target label object.
+  - `lv_obj_t* src` — The source object with a checked state.
+  - `const char* txt_on` — Text to display when checked.
+  - `const char* txt_off` — Text to display when unchecked.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
+- **Return value:** None.
 
-#### `ui_anim_callback_set_x(a, v)`
+### `ui_spinbox_step`
+Increments or decrements the value of a spinbox.
 
-Sets the X position in an animation callback.
+- **Parameters:**
+  - `lv_obj_t* target` — The spinbox object.
+  - `int val` — The increment value (positive for increment, negative for decrement).
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
-  - `v` (int32_t): X position value.
+- **Return value:** None.
+- **Return value:** None.
 
-#### `ui_anim_callback_set_y(a, v)`
+## UI Animation API
 
-Sets the Y position in an animation callback.
+### `ui_anim_callback_set_x`
+Sets the X position of an object during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
-  - `v` (int32_t): Y position value.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
+  - `int32_t v` — The new X position.
 
-#### `ui_anim_callback_set_width(a, v)`
+- **Return value:** None.
 
-Sets the width in an animation callback.
+### `ui_anim_callback_set_y`
+Sets the Y position of an object during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
-  - `v` (int32_t): Width value.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
+  - `int32_t v` — The new Y position.
 
-#### `ui_anim_callback_set_height(a, v)`
+- **Return value:** None.
 
-Sets the height in an animation callback.
+### `ui_anim_callback_set_width`
+Sets the width of an object during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
-  - `v` (int32_t): Height value.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
+  - `int32_t v` — The new width.
 
-#### `ui_anim_callback_set_opacity(a, v)`
+- **Return value:** None.
 
-Sets the opacity in an animation callback.
+### `ui_anim_callback_set_height`
+Sets the height of an object during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
-  - `v` (int32_t): Opacity value.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
+  - `int32_t v` — The new height.
 
-#### `ui_anim_callback_set_image_zoom(a, v)`
+- **Return value:** None.
 
-Sets the image zoom in an animation callback.
+### `ui_anim_callback_set_opacity`
+Sets the opacity of an object during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
-  - `v` (int32_t): Zoom value.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
+  - `int32_t v` — The new opacity (0-255).
 
-#### `ui_anim_callback_set_image_angle(a, v)`
+- **Return value:** None.
 
-Sets the image angle in an animation callback.
+### `ui_anim_callback_set_image_zoom`
+Sets the zoom level for an image during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
-  - `v` (int32_t): Angle value.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
+  - `int32_t v` — The new zoom value.
 
-#### `ui_anim_callback_set_image_frame(a, v)`
+- **Return value:** None.
 
-Sets the image frame in an animation callback.
+### `ui_anim_callback_set_image_angle`
+Sets the angle of an image during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
-  - `v` (int32_t): Frame value.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
+  - `int32_t v` — The new angle in degrees.
 
-#### `ui_anim_callback_get_x(a)`
+- **Return value:** None.
 
-Gets the X position in an animation callback.
+### `ui_anim_callback_set_image_frame`
+Sets the image frame during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
+  - `int32_t v` — The frame index.
 
-#### `ui_anim_callback_get_y(a)`
+- **Return value:** None.
 
-Gets the Y position in an animation callback.
+### `ui_anim_callback_get_x`
+Gets the current X position of an object during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
 
-#### `ui_anim_callback_get_width(a)`
+- **Return value:** `int32_t` — The current X position.
 
-Gets the width in an animation callback.
+### `ui_anim_callback_get_y`
+Gets the current Y position of an object during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
 
-#### `ui_anim_callback_get_height(a)`
+- **Return value:** `int32_t` — The current Y position.
 
-Gets the height in an animation callback.
+### `ui_anim_callback_get_width`
+Gets the current width of an object during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
 
-#### `ui_anim_callback_get_opacity(a)`
+- **Return value:** `int32_t` — The current width.
 
-Gets the opacity in an animation callback.
+### `ui_anim_callback_get_height`
+Gets the current height of an object during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
 
-#### `ui_anim_callback_get_image_zoom(a)`
+- **Return value:** `int32_t` — The current height.
 
-Gets the image zoom in an animation callback.
+### `ui_anim_callback_get_opacity`
+Gets the current opacity of an object during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
 
-#### `ui_anim_callback_get_image_angle(a)`
+- **Return value:** `int32_t` — The current opacity.
 
-Gets the image angle in an animation callback.
+### `ui_anim_callback_get_image_zoom`
+Gets the current zoom level of an image during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
 
-#### `ui_anim_callback_get_image_frame(a)`
+- **Return value:** `int32_t` — The current zoom value.
 
-Gets the image frame in an animation callback.
+### `ui_anim_callback_get_image_angle`
+Gets the current angle of an image during an animation.
 
-- **Arguments**:
-  - `a` (lv_anim_t*): Pointer to the animation.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
 
-#### `ui_checked_set_text_value(trg, src, txt_on, txt_off)`
+- **Return value:** `int32_t` — The current angle in degrees.
 
-Sets the text value based on the checked state.
+### `ui_anim_callback_get_image_frame`
+Gets the current frame of an image during an animation.
 
-- **Arguments**:
-  - `trg` (lv_obj_t*): Pointer to the target object.
-  - `src` (lv_obj_t*): Pointer to the source object.
-  - `txt_on` (const char*): Text when checked.
-  - `txt_off` (const char*): Text when not checked.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
 
-#### `ui_spinbox_step(target, val)`
+- **Return value:** `int32_t` — The current frame index.
 
-Increments or decrements the spinbox value.
+### `ui_anim_callback_free_user_data`
+Frees the user data associated with an animation.
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the spinbox object.
-  - `val` (int): Value to step.
+- **Parameters:**
+  - `lv_anim_t* a` — The animation structure.
+
+- **Return value:** None.
 
 ## UI Camera API
 
-#### `ui_camera_enable(enable)`
-
+### `ui_camera_enable`
 Enables or disables the camera.
 
-- **Arguments**:
-  - `enable` (bool): True to enable, false to disable.
+- **Parameters:**
+  - `bool enable` — If `true`, enables the camera. If `false`, disables the camera.
 
-#### `ui_camera_select(camera)`
+- **Return value:** None.
 
-Selects the camera.
+### `ui_camera_select`
+Selects the active camera.
 
-- **Arguments**:
-  - `camera` (uint8_t): Camera ID.
+- **Parameters:**
+  - `uint8_t camera` — The camera index to select.
+
+- **Return value:** None.
 
 ## UI Time API
 
-#### `ui_set_time_text_from_rtc(trg, prefix, postfix, tick)`
+### `ui_set_time_text_from_rtc`
+Sets the time text based on the RTC module.
 
-Sets the time text from the RTC module.
+- **Parameters:**
+  - `lv_obj_t* trg` — The target label object where the time will be displayed.
+  - `const char* prefix` — The prefix text to be displayed before the time.
+  - `const char* postfix` — The postfix text to be displayed after the time.
+  - `bool tick` — If `true`, include seconds in the display; otherwise, display hours and minutes only.
 
-- **Arguments**:
-  - `trg` (lv_obj_t*): Pointer to the target object.
-  - `prefix` (const char*): Prefix of the text.
-  - `postfix` (const char*): Postfix of the text.
-  - `tick` (bool): Flag to use tick format.
+- **Return value:** None.
 
-#### `ui_set_date_text_from_rtc(trg, prefix, postfix)`
+### `ui_set_date_text_from_rtc`
+Sets the date text based on the RTC module.
 
-Sets the date text from the RTC module.
+- **Parameters:**
+  - `lv_obj_t* trg` — The target label object where the date will be displayed.
+  - `const char* prefix` — The prefix text to be displayed before the date.
+  - `const char* postfix` — The postfix text to be displayed after the date.
 
-- **Arguments**:
-  - `trg` (lv_obj_t*): Pointer to the target object.
-  - `prefix` (const char*): Prefix of the text.
-  - `postfix` (const char*): Postfix of the text.
+- **Return value:** None.
+
+### `ui_set_timedate_text_from_rtc`
+Sets both the time and date text based on the RTC module.
+
+- **Parameters:**
+  - `lv_obj_t* trg` — The target label object where the time and date will be displayed.
+  - `const char* prefix` — The prefix text to be displayed before the time and date.
+  - `const char* postfix` — The postfix text to be displayed after the time and date.
+
+- **Return value:** None.
 
 ## UI GPS API
 
-#### `ui_get_speed_gps()`
+### `ui_get_speed_gps`
+Retrieves the current speed from the GPS module.
 
-Returns the speed from the GPS.
+- **Parameters:** None.
+- **Return value:** `int` — The current speed reported by the GPS.
 
-#### `ui_set_arc_value_from_speed_gps(target)`
+### `ui_set_arc_value_from_speed_gps`
+Sets the value of an arc object based on the current GPS speed.
 
-Sets the arc value based on the GPS speed.
+- **Parameters:**
+  - `lv_obj_t* target` — The arc object where the speed value will be set.
 
-- **Arguments**:
-  - `target` (lv_obj_t*): Pointer to the target object.
+- **Return value:** None.
+
+---
+ 

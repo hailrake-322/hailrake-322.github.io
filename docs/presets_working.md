@@ -1,12 +1,12 @@
-# <center> Screen Presets
+# Screen Presets
 
 ### Presets are variable structures with 2 LVGL screens, this is necessary to ensure the best performance of the panel, for convenience it is recommended to name the screens in `eez studio` as follows:
-<center>`Preset_Example_Screen_Ico`<br></center>
-<center>`Preset_Example_Screen_Background `</center>
+`screen_ico_preset_example`<br>
+`screen_background_preset_example `
 
 ### Presets are initialized in the function `ui_init` (app_ui.c) and the loading screen is selected in it, this function needs to be written from `eez studio`
 
-## <center>Example of filling `ui_init`
+## Example of filling `ui_init`
 
 ```C
 /* Variables */
@@ -40,7 +40,7 @@ void ui_init() {
 
 
 ###  It is also necessary to call the screen creation functions in the correct order, this is done at the very bottom of the `app_screens.c` module, the `create_screens` function, this is done in the eez studio code editor (as everything that eez generates)
-## <center>Example of filling `create_screens`
+## Example of filling `create_screens`
 
 ```C
 /*******************************************************************************
@@ -54,11 +54,11 @@ void create_screens(void) {
 	
 	/* init backgrounds */
 	lv_disp_set_default(disp_background);
-    create_screen_preset_example_screen_background();
+    create_screen_screen_background_preset_example();
 	
 	/* init ico */
 	lv_disp_set_default(disp_ico);
-    create_screen_preset_example_screen_ico();
+    create_screen_ico_preset_example();
 
 }
 ```

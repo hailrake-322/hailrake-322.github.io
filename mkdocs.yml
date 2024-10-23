@@ -59,12 +59,13 @@ nav:
       - Assets system: assets.md
       - Update firmware from boot: boot.md
       - Working with UI:
-        - EEZ Studio: 
-          - Get Start: eez_start.md
         - Keil Project: 
           - Screen Presets: presets_working.md
           - Events:  events_working.md
           - Recommendations: recommendations.md
+  - Applications:
+      - Simulator: simulator.md
+      - Updater: updater.md
   - API:
       - UI: api_lvgl_addon.md
       - OTHER: api_other.md

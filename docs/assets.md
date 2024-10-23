@@ -1,6 +1,6 @@
 # <center>Using Assets
 
-* The converter is on the path `vega sdk->image converter`
+* The converter is on the path `sdk->image converter`
 *  Copy all your resources (in PNG format) to the assets folder
 *  Run the converter and wait for the conversion to finish
 *  As a result you will get 2 files, assets.bin/c, copy them to the root directory (TypeDR_DS_XXX) 
