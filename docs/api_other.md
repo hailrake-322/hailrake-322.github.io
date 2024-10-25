@@ -1,55 +1,117 @@
-## OTHER API
+# Other API Documentation
 
-## PWM
+## Overview
+This document provides detailed descriptions of various application functions, including operations related to FRAM memory, time settings, audio control, and PWM (Pulse Width Modulation). Each function's parameters, return values, and usage are described.
 
-#### `UI_Manage_Display_Power`
-
-This function manages the display's power state by smoothly adjusting the display brightness through PWM (Pulse Width Modulation).
-
-- **Arguments**:
-  - `enable` (Screen_Preset*): A bool to determine whether the display should be enabled (`true`) or disabled (`false`).
-- **Functionality**:
-  - If enable is true, the display brightness is gradually increased by incrementing val_enable until it reaches PWM_DISPLAY_ENABLE_VALUE.
-  - If enable is false, the brightness is decreased by decrementing val_disable until it reaches PWM_DISPLAY_DISABLE_VALUE.
-  - A delay of 6 ticks (vTaskDelay(6)) is applied between each brightness adjustment to smooth the transition.
-
-#### `pwm_set_value`
-
-- **Arguments**:
-  - `value` The target PWM value to set the brightness
-- **Functionality**:
-  - If the current brightness (`brightness_global_value`) is less than `value`, it is incremented until it matches `value`.
-  - If it is greater than `value`, it is decremented until it matches.
-  - The final brightness is clamped between PWM_MIN_VALUE and PWM_MAX_VALUE to avoid exceeding allowed limits.
-
-## RTC_SetTimeDate_GPS
-
-This function sets the system time and date using data from the GPS module.
-
-## AUDIO
-
-### audio_SetVolume
-
-**Description**:  
-Sets the volume using the `AUDIO_BeepVolume` enum. This function adjusts the audio volume by communicating with the audio driver over I2C.
-
-**Parameters**:  
-- Volume: An 8-bit value that represents the volume level to be set. The value corresponds to a level in the `AUDIO_BeepVolume` enum, ranging from +6dB to -56dB.
-
-**Return**:  
-None.
+## Table of Contents
+1. [FRAM Block](#fram-block)
+2. [Time Block](#time-block)
+3. [Audio Block](#audio-block)
+4. [PWM Block](#pwm-block)
 
 ---
 
-### audio_PlayBeep
+## FRAM Block
 
-**Description**:  
-Plays a beep sound at a specified frequency and duration.
+### `app_fram_write`
+Writes a block of data to FRAM memory.
 
-**Parameters**:  
-- val_hz: The frequency of the beep in Hz.
-- val_ms: Duration of the beep in milliseconds. If `val_ms > 0`, it sets a delayed stop for the beep. If `val_ms == 0`, it plays immediately, and negative values terminate the beep.
-- val_db: Volume level for the beep, corresponding to one of the values from the `AUDIO_BeepVolume` enum.
+- **Description:**  
+  Writes a block of data from the specified buffer to the given address in the FRAM memory.
 
-**Return**:  
-None.
+- **Parameters:**
+  - `uint32_t Address` — The starting address in the FRAM memory where the data should be written.
+  - `uint8_t *txBuff` — A pointer to the buffer containing the data to be written.
+  - `uint8_t txBuffSize` — The size of the buffer (number of bytes to write).
+
+- **Return value:**  
+  - `int` — Returns a status code indicating the success or failure of the write operation.
+
+### `app_fram_read`
+Reads a block of data from FRAM memory.
+
+- **Description:**  
+  Reads a block of data from the specified address in the FRAM memory into the provided buffer.
+
+- **Parameters:**
+  - `uint32_t Address` — The starting address in the FRAM memory from where the data should be read.
+  - `uint8_t *rxBuff` — A pointer to the buffer where the read data will be stored.
+  - `uint8_t rxBuffSize` — The size of the buffer (number of bytes to read).
+
+- **Return value:**  
+  - `int` — Returns a status code indicating the success or failure of the read operation.
+
+---
+
+## Time Block
+
+### `app_rtc_set_timedate_from_gps`
+Sets the system time based on data from the GPS module.
+
+- **Description:**  
+  Updates the system's real-time clock (RTC) using the time and date provided by the GPS module.
+
+- **Parameters:** None.
+
+- **Return value:** None.
+
+---
+
+## Audio Block
+
+### `app_audio_play_beep`
+Plays a beep sound.
+
+- **Description:**  
+  Generates a beep sound with the specified frequency, duration, and volume.
+
+- **Parameters:**
+  - `uint8_t hz` — The frequency of the beep in Hertz.
+  - `int ms` — The duration of the beep in milliseconds.
+  - `int8_t db` — The volume level in decibels.
+
+- **Return value:** None.
+
+### `app_audio_set_volume`
+Sets the audio volume.
+
+- **Description:**  
+  Adjusts the audio volume level. The value should be in the range of 0 to 100 percent.
+
+- **Parameters:**
+  - `uint8_t volume` — The volume level to set (0-100).
+
+- **Return value:** None.
+
+---
+
+## PWM Block
+
+### `app_pwm_set_value`
+Sets the brightness level using PWM.
+
+- **Description:**  
+  Sets the brightness of a display or LED using a PWM signal. The brightness level is determined by the provided value.
+
+- **Parameters:**
+  - `int value` — The brightness level to set.
+
+- **Return value:** None.
+
+### `app_enable_display`
+Enables or disables the display.
+
+- **Description:**  
+  Gradually increases or decreases the display brightness using PWM to enable or disable it.
+
+- **Parameters:**
+  - `bool enable` — If `true`, enables the display by gradually increasing the brightness. If `false`, disables the display by gradually decreasing the brightness.
+
+- **Return value:** None.
+
+---
+
+## Notes
+- The FRAM functions rely on lower-level functions (`FRAM_BlockWrite` and `FRAM_BlockRead`) to perform the actual memory operations.
+- `app_enable_display` uses a gradual adjustment of PWM values with delays to create a smooth transition effect.
+- Error handling for FRAM operations is determined by the status returned by the respective lower-level functions.
