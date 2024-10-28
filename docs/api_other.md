@@ -1,8 +1,5 @@
 # Other API Documentation
 
-## Overview
-This document provides detailed descriptions of various application functions, including operations related to FRAM memory, time settings, audio control, and PWM (Pulse Width Modulation). Each function's parameters, return values, and usage are described.
-
 ## Table of Contents
 1. [FRAM Block](#fram-block)
 2. [Time Block](#time-block)
@@ -110,8 +107,3 @@ Enables or disables the display.
 - **Return value:** None.
 
 ---
-
-## Notes
-- The FRAM functions rely on lower-level functions (`FRAM_BlockWrite` and `FRAM_BlockRead`) to perform the actual memory operations.
-- `app_enable_display` uses a gradual adjustment of PWM values with delays to create a smooth transition effect.
-- Error handling for FRAM operations is determined by the status returned by the respective lower-level functions.

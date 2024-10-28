@@ -5,10 +5,10 @@ Updater allows you to reflash the panel, download the firmware from the git repo
 ## Installation:
 * The updater requires [Python](https://www.python.org/downloads/) version 3.12 or higher and a [Git](https://git-scm.com/downloads) client to be installed.
 
-* Download Updater client and drivers
-[![Download Updater](https://img.shields.io/badge/Download-Updater-blue)](Vega RS Updater.exe)
-[![Download Disk Driver](https://img.shields.io/badge/Download-diskDriver-blue)](cdc.cat)
-[![Download USB Driver](https://img.shields.io/badge/Download-usbDriver-blue)](fsl_ucwxp.inf)
+* Download Updater client and drivers <br>
+[![Download Updater](https://img.shields.io/badge/Download-Updater-blue)](Vega RS Updater.exe) <br>
+[![Download Disk Driver](https://img.shields.io/badge/Download-diskDriver-blue)](cdc.cat) <br> 
+[![Download USB Driver](https://img.shields.io/badge/Download-usbDriver-blue)](fsl_ucwxp.inf) <br>
 
 
 * Before installing/launching the application, install the driver that comes with the standalone version installer (`fsl_ucwxp`).
