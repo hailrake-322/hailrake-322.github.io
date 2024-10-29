@@ -46,8 +46,6 @@ footer:
 
 nav:
   - Home: index.md
-  - News:
-    - Changelog: changelog.md
   - Applications:
       - Launcher: launcher.md
       - Updater: updater.md
