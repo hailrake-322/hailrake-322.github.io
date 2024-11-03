@@ -6,6 +6,7 @@
 - [Time Block](#time-block)
 - [Audio Block](#audio-block)
 - [PWM Block](#pwm-block)
+- [RTOS Block](#rtos-block)
 ---
 
 ## FRAM Block
@@ -13,24 +14,22 @@
 The FRAM (Ferroelectric RAM) block provides functions for reading and writing data to non-volatile FRAM memory.
 
 ### `app_fram_write`
-Writes a block of data to a specified address in FRAM memory.
+Adds a message to the queue for writing to FRAM memory.
 
 - **Parameters**:
-  - `uint32_t Address`: The memory address in FRAM where the data will be written.
-  - `uint8_t *txBuff`: A pointer to the buffer containing the data to be written.
-  - `uint8_t txBuffSize`: The number of bytes in the buffer to write to FRAM.
+  - `fram_message message`: The message structure to write to FRAM.
 - **Returns**: 
-  - `status_t`: The status of the write operation. `0` indicates success, while a non-zero value indicates an error.
+  - `int`: The current count of messages in the write queue.
 
 ### `app_fram_read`
-Reads a block of data from a specified address in FRAM memory into a buffer.
+Reads a block of data from FRAM memory at the specified address.
 
 - **Parameters**:
-  - `uint32_t Address`: The memory address in FRAM from which data will be read.
+  - `uint32_t address`: The memory address in FRAM from which data will be read.
   - `uint8_t *rxBuff`: A pointer to the buffer where the read data will be stored.
-  - `uint8_t rxBuffSize`: The number of bytes to read from FRAM into `rxBuff`.
+  - `uint8_t rxBuffSize`: The size of the buffer, determining the number of bytes to read.
 - **Returns**:
-  - `status_t`: The status of the read operation. `0` indicates success, while a non-zero value indicates an error.
+  - `status_t`: The status of the read operation. kStatus_Success indicates success, while a non-kStatus_Success value indicates an error.
 
 ---
 
@@ -39,13 +38,13 @@ Reads a block of data from a specified address in FRAM memory into a buffer.
 The Time Block provides functions for managing and setting system time and date. It includes options to set the time from a GPS module or manually.
 
 ### `app_rtc_set_timedate_from_gps`
-Sets the system time and date based on data from the GPS module.
+Sets the system date and time based on data from the GPS module.
 
 - **Parameters**: None.
 - **Returns**: None.
 
 ### `app_rtc_set_timedate`
-Sets both the system date and time.
+Sets both the system date and time manually.
 
 - **Parameters**:
   - `int month`: The month (1–12).
@@ -116,3 +115,65 @@ Enables or disables the display with a gradual brightness change.
   - `bool enable`: If `true`, enables the display by increasing brightness to a defined value. If `false`, disables it by gradually reducing brightness.
 - **Returns**: None.
 - **Description**: This function smoothly transitions the brightness level using predefined values (`PWM_DISPLAY_ENABLE_VALUE` and `PWM_DISPLAY_DISABLE_VALUE`) to avoid abrupt changes in display brightness.
+
+---
+
+## RTOS Block
+
+The RTOS Block provides functions for managing tasks and timers in a real-time operating system (FreeRTOS).
+
+### `app_resume_handler`
+Resumes the specified timer.
+
+- **Parameters**:
+  - `Object_Handle_t handler`: The timer handle to resume.
+- **Returns**: None.
+
+### `app_pause_handler`
+Pauses the specified timer.
+
+- **Parameters**:
+  - `Object_Handle_t handler`: The timer handle to pause.
+- **Returns**: None.
+
+### `app_create_handler`
+Creates a timer with specified parameters and starts it.
+
+- **Parameters**:
+  - `Object_Handle_t handler`: The timer handle.
+  - `void *handler_callback`: The callback function invoked when the timer elapses.
+  - `int handler_period`: The period of the timer in ticks.
+  - `const char *handler_name`: The name of the timer.
+- **Returns**: None.
+
+### `app_resume_task`
+Resumes the specified task.
+
+- **Parameters**:
+  - `TaskHandle_t task`: The task handle to resume.
+- **Returns**: None.
+
+### `app_delete_task`
+Deletes the specified task.
+
+- **Parameters**:
+  - `TaskHandle_t task`: The task handle to delete.
+- **Returns**: None.
+
+### `app_pause_task`
+Pauses the specified task.
+
+- **Parameters**:
+  - `TaskHandle_t task`: The task handle to pause.
+- **Returns**: None.
+
+### `app_create_task`
+Creates a task with the specified parameters.
+
+- **Parameters**:
+  - `TaskHandle_t task`: The task handle.
+  - `void *task_function`: The function pointer for the task.
+  - `const char *task_name`: The name of the task.
+  - `uint16_t stacksize`: The stack size for the task.
+- **Returns**: 
+  - `int`: The total number of tasks created.

@@ -45,7 +45,6 @@ footer:
   - text: "Copyright 2024 Protok"
 
 nav:
-  - Home: index.md
   - Applications:
       - Launcher: launcher.md
       - Updater: updater.md
@@ -63,9 +62,9 @@ nav:
           - Screen Presets: presets_working.md
           - Events:  events_working.md
           - Recommendations: recommendations.md
-  - API:
-      - UI: api_lvgl_addon.md
-      - OTHER: api_other.md
+  - Api:
+      - Ui: api_lvgl_addon.md
+      - Other: api_other.md
 #  - API Documentation:
  #     - API Documentation: swagger/index.html
 
