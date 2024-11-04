@@ -776,6 +776,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fram-message-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      FRAM Message Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fram-block" class="md-nav__link">
     <span class="md-ellipsis">
       FRAM Block
@@ -798,6 +822,15 @@
   <a href="#app_fram_read" class="md-nav__link">
     <span class="md-ellipsis">
       app_fram_read
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app_fram_wait_init" class="md-nav__link">
+    <span class="md-ellipsis">
+      app_fram_wait_init
     </span>
   </a>
   
@@ -936,6 +969,16 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handlers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Handlers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#app_resume_handler" class="md-nav__link">
     <span class="md-ellipsis">
       app_resume_handler
@@ -961,6 +1004,21 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tasks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tasks">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#app_resume_task" class="md-nav__link">
@@ -995,6 +1053,11 @@
       app_create_task
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1055,6 +1118,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fram-message-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      FRAM Message Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fram-block" class="md-nav__link">
     <span class="md-ellipsis">
       FRAM Block
@@ -1077,6 +1164,15 @@
   <a href="#app_fram_read" class="md-nav__link">
     <span class="md-ellipsis">
       app_fram_read
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app_fram_wait_init" class="md-nav__link">
+    <span class="md-ellipsis">
+      app_fram_wait_init
     </span>
   </a>
   
@@ -1215,6 +1311,16 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handlers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Handlers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#app_resume_handler" class="md-nav__link">
     <span class="md-ellipsis">
       app_resume_handler
@@ -1240,6 +1346,21 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tasks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tasks">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#app_resume_task" class="md-nav__link">
@@ -1281,6 +1402,11 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
@@ -1301,6 +1427,8 @@
 <hr />
 <h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
 <ul>
+<li><a href="#data-structures">Data Structures</a></li>
+<li><a href="#fram-message-structure">FRAM Message Structure</a></li>
 <li><a href="#fram-block">FRAM Block</a></li>
 <li><a href="#time-block">Time Block</a></li>
 <li><a href="#audio-block">Audio Block</a></li>
@@ -1308,37 +1436,56 @@
 <li><a href="#rtos-block">RTOS Block</a></li>
 </ul>
 <hr />
+<h2 id="data-structures">Data Structures<a class="headerlink" href="#data-structures" title="Permanent link">&para;</a></h2>
+<h3 id="fram-message-structure">FRAM Message Structure<a class="headerlink" href="#fram-message-structure" title="Permanent link">&para;</a></h3>
+<p>The <code>fram_message</code> structure defines the parameters for FRAM data transfer operations.</p>
+<ul>
+<li><strong>Fields</strong>:</li>
+<li><code>address</code>: Target memory address in FRAM.</li>
+<li><code>data</code>: Pointer to the data buffer for read or write operations.</li>
+<li><code>data_len</code>: Length of data in bytes.</li>
+<li><code>status</code>: Status of the operation.</li>
+<li><code>callback</code>: Function pointer to a callback invoked upon completion.</li>
+</ul>
+<hr />
 <h2 id="fram-block">FRAM Block<a class="headerlink" href="#fram-block" title="Permanent link">&para;</a></h2>
-<p>The FRAM (Ferroelectric RAM) block provides functions for reading and writing data to non-volatile FRAM memory.</p>
+<p>The FRAM block provides functions for interacting with non-volatile FRAM memory, including writing data, reading data, and waiting for FRAM to initialize.</p>
 <h3 id="app_fram_write"><code>app_fram_write</code><a class="headerlink" href="#app_fram_write" title="Permanent link">&para;</a></h3>
-<p>Adds a message to the queue for writing to FRAM memory.</p>
+<p>Adds a <code>fram_message</code> to the write queue for FRAM memory.</p>
 <ul>
 <li><strong>Parameters</strong>:</li>
-<li><code>fram_message message</code>: The message structure to write to FRAM.</li>
+<li><code>fram_message message</code>: A structure containing FRAM data transfer details.</li>
+<li><code>void *callback</code>: Pointer to the callback function to be invoked after the write completes.</li>
 <li><strong>Returns</strong>: </li>
 <li><code>int</code>: The current count of messages in the write queue.</li>
 </ul>
 <h3 id="app_fram_read"><code>app_fram_read</code><a class="headerlink" href="#app_fram_read" title="Permanent link">&para;</a></h3>
-<p>Reads a block of data from FRAM memory at the specified address.</p>
+<p>Reads a block of data from a specified address in FRAM memory.</p>
 <ul>
 <li><strong>Parameters</strong>:</li>
 <li><code>uint32_t address</code>: The memory address in FRAM from which data will be read.</li>
 <li><code>uint8_t *rxBuff</code>: A pointer to the buffer where the read data will be stored.</li>
 <li><code>uint8_t rxBuffSize</code>: The size of the buffer, determining the number of bytes to read.</li>
 <li><strong>Returns</strong>:</li>
-<li><code>status_t</code>: The status of the read operation. kStatus_Success indicates success, while a non-kStatus_Success value indicates an error.</li>
+<li><code>status_t</code>: The status of the read operation. <code>0</code> indicates success, while a non-zero value indicates an error.</li>
+</ul>
+<h3 id="app_fram_wait_init"><code>app_fram_wait_init</code><a class="headerlink" href="#app_fram_wait_init" title="Permanent link">&para;</a></h3>
+<p>Waits for the FRAM module to start before proceeding.</p>
+<ul>
+<li><strong>Parameters</strong>: None.</li>
+<li><strong>Returns</strong>: None.</li>
 </ul>
 <hr />
 <h2 id="time-block">Time Block<a class="headerlink" href="#time-block" title="Permanent link">&para;</a></h2>
-<p>The Time Block provides functions for managing and setting system time and date. It includes options to set the time from a GPS module or manually.</p>
+<p>The Time Block provides functions for managing and setting the system’s date and time, with options to set values manually or sync with a GPS module.</p>
 <h3 id="app_rtc_set_timedate_from_gps"><code>app_rtc_set_timedate_from_gps</code><a class="headerlink" href="#app_rtc_set_timedate_from_gps" title="Permanent link">&para;</a></h3>
-<p>Sets the system date and time based on data from the GPS module.</p>
+<p>Sets the system date and time based on GPS module data.</p>
 <ul>
 <li><strong>Parameters</strong>: None.</li>
 <li><strong>Returns</strong>: None.</li>
 </ul>
 <h3 id="app_rtc_set_timedate"><code>app_rtc_set_timedate</code><a class="headerlink" href="#app_rtc_set_timedate" title="Permanent link">&para;</a></h3>
-<p>Sets both the system date and time manually.</p>
+<p>Sets both the system date and time.</p>
 <ul>
 <li><strong>Parameters</strong>:</li>
 <li><code>int month</code>: The month (1–12).</li>
@@ -1406,62 +1553,64 @@
 </ul>
 <hr />
 <h2 id="rtos-block">RTOS Block<a class="headerlink" href="#rtos-block" title="Permanent link">&para;</a></h2>
-<p>The RTOS Block provides functions for managing tasks and timers in a real-time operating system (FreeRTOS).</p>
-<h3 id="app_resume_handler"><code>app_resume_handler</code><a class="headerlink" href="#app_resume_handler" title="Permanent link">&para;</a></h3>
+<p>The RTOS Block provides functions for managing tasks and timers within a real-time operating system (FreeRTOS).</p>
+<h3 id="handlers">Handlers<a class="headerlink" href="#handlers" title="Permanent link">&para;</a></h3>
+<h4 id="app_resume_handler"><code>app_resume_handler</code><a class="headerlink" href="#app_resume_handler" title="Permanent link">&para;</a></h4>
 <p>Resumes the specified timer.</p>
 <ul>
 <li><strong>Parameters</strong>:</li>
 <li><code>Object_Handle_t handler</code>: The timer handle to resume.</li>
 <li><strong>Returns</strong>: None.</li>
 </ul>
-<h3 id="app_pause_handler"><code>app_pause_handler</code><a class="headerlink" href="#app_pause_handler" title="Permanent link">&para;</a></h3>
+<h4 id="app_pause_handler"><code>app_pause_handler</code><a class="headerlink" href="#app_pause_handler" title="Permanent link">&para;</a></h4>
 <p>Pauses the specified timer.</p>
 <ul>
 <li><strong>Parameters</strong>:</li>
 <li><code>Object_Handle_t handler</code>: The timer handle to pause.</li>
 <li><strong>Returns</strong>: None.</li>
 </ul>
-<h3 id="app_create_handler"><code>app_create_handler</code><a class="headerlink" href="#app_create_handler" title="Permanent link">&para;</a></h3>
+<h4 id="app_create_handler"><code>app_create_handler</code><a class="headerlink" href="#app_create_handler" title="Permanent link">&para;</a></h4>
 <p>Creates a timer with specified parameters and starts it.</p>
 <ul>
 <li><strong>Parameters</strong>:</li>
 <li><code>Object_Handle_t handler</code>: The timer handle.</li>
-<li><code>void *handler_callback</code>: The callback function invoked when the timer elapses.</li>
+<li><code>void *handler_callback</code>: The callback function to be called when the timer elapses.</li>
 <li><code>int handler_period</code>: The period of the timer in ticks.</li>
 <li><code>const char *handler_name</code>: The name of the timer.</li>
 <li><strong>Returns</strong>: None.</li>
 </ul>
-<h3 id="app_resume_task"><code>app_resume_task</code><a class="headerlink" href="#app_resume_task" title="Permanent link">&para;</a></h3>
+<h3 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h3>
+<h4 id="app_resume_task"><code>app_resume_task</code><a class="headerlink" href="#app_resume_task" title="Permanent link">&para;</a></h4>
 <p>Resumes the specified task.</p>
 <ul>
 <li><strong>Parameters</strong>:</li>
 <li><code>TaskHandle_t task</code>: The task handle to resume.</li>
 <li><strong>Returns</strong>: None.</li>
 </ul>
-<h3 id="app_delete_task"><code>app_delete_task</code><a class="headerlink" href="#app_delete_task" title="Permanent link">&para;</a></h3>
+<h4 id="app_delete_task"><code>app_delete_task</code><a class="headerlink" href="#app_delete_task" title="Permanent link">&para;</a></h4>
 <p>Deletes the specified task.</p>
 <ul>
 <li><strong>Parameters</strong>:</li>
 <li><code>TaskHandle_t task</code>: The task handle to delete.</li>
 <li><strong>Returns</strong>: None.</li>
 </ul>
-<h3 id="app_pause_task"><code>app_pause_task</code><a class="headerlink" href="#app_pause_task" title="Permanent link">&para;</a></h3>
+<h4 id="app_pause_task"><code>app_pause_task</code><a class="headerlink" href="#app_pause_task" title="Permanent link">&para;</a></h4>
 <p>Pauses the specified task.</p>
 <ul>
 <li><strong>Parameters</strong>:</li>
 <li><code>TaskHandle_t task</code>: The task handle to pause.</li>
 <li><strong>Returns</strong>: None.</li>
 </ul>
-<h3 id="app_create_task"><code>app_create_task</code><a class="headerlink" href="#app_create_task" title="Permanent link">&para;</a></h3>
-<p>Creates a task with the specified parameters.</p>
+<h4 id="app_create_task"><code>app_create_task</code><a class="headerlink" href="#app_create_task" title="Permanent link">&para;</a></h4>
+<p>Creates a task with specified parameters.</p>
 <ul>
 <li><strong>Parameters</strong>:</li>
 <li><code>TaskHandle_t task</code>: The task handle.</li>
-<li><code>void *task_function</code>: The function pointer for the task.</li>
+<li><code>void *task_function</code>: Pointer to the task function.</li>
 <li><code>const char *task_name</code>: The name of the task.</li>
-<li><code>uint16_t stacksize</code>: The stack size for the task.</li>
+<li><code>uint16_t stacksize</code>: The stack size allocated for the task.</li>
 <li><strong>Returns</strong>: </li>
-<li><code>int</code>: The total number of tasks created.</li>
+<li><code>int</code>: The total count of tasks created.</li>
 </ul>
 
 
